@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>memorial books</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- CSS -->
+    <style>
+        .upcomingevents {
+            position: relative;
+            margin: 100px 100px 0px;
+        }
+
+        .upcomingevents h3 {
+            font-weight: bold;
+            font-size: 25px;
+            color: #B32137;
+        }
+
+        .upcoming {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 100px;
+        }
+
+        .upcomingevent1 {
+            width: 35%;
+            margin-top: 30px;
+        }
+
+        .upcoming-img {
+            overflow: hidden;
+            width: 40%;
+            float: left;
+            height: 130.8px;
+        }
+
+        .upcoming-img img:hover {
+            transform: scale(1.1);
+            transition: .5s;
+        }
+
+        .upcoming-title-date {
+            width: 60%;
+            position: relative;
+            float: right;
+            padding-left: 15px;
+        }
+
+        .upcoming-title-date .upcoming-title {
+            display: inline-block;
+            font-size: medium;
+            color: #282727;
+            margin-bottom: 10px;
+        }
+
+        .upcoming-title-date .upcoming-title:hover {
+            text-decoration: underline;
+            color: #B32137;
+            cursor: pointer;
+        }
+
+        .upcoming-title-date .upcoming-date {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 15px;
+            color: #ffffff;
+            background-color: #81256C;
+            padding: 4px;
+        }
+
+        .upcomingevent2 {
+            width: 35%;
+            margin-top: 30px;
+        }
+
+        .events-calendar {
+            width: 15%;
+            margin-top: 30px;
+            background-color: #282727;
+        }
+
+        .events-calendar .calendar-img {
+            align-self: center;
+            margin: 10px auto;
+            width: 64px;
+            height: 64px;
+            background-color: #282727;
+            padding: 5px;
+        }
+
+        .events-calendar span {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #81256C;
+            padding: 15px;
+        }
+
+        .events-calendar span:hover {
+            text-decoration: underline;
+            background-color: #282727;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .passedevents {
+            position: relative;
+            margin: 50px 100px 0px;
+        }
+
+        .passedevents h2 {
+            font-weight: bold;
+            font-size: 30px;
+            color: #B32137;
+        }
+
+        .passedevents-boxes .passed-event-title {
+            padding: 0px 20px;
+            font-weight: bold;
+            font-size: 28px;
+            color: #B32137;
+            display: block;
+        }
+
+        .passedevents-boxes .passed-event-title:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .passedevents-boxes img {
+            padding: 20px 20px 0;
+        }
+
+        .passedevents-boxes hr {
+            border-color: #666666;
+            margin: 5px 20px;
+        }
+
+        .passedevents-boxes .passed-event-date {
+            display: block;
+            font-size: 15px;
+            font-weight: bold;
+            color: #B32137;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .passedevents-boxes p {
+            display: block;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        .passedevents-boxes .find-out-more {
+            position: relative;
+            display: block;
+            text-align: right;
+            font-size: medium;
+            text-decoration: underline;
+            color: #000000;
+            padding: 0 20px;
+            margin: 10px 0;
+        }
+
+        .passedevents-boxes .find-out-more:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            transition: ease-in-out;
+            color: #81256C;
+            cursor: pointer;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line1 .chomsky {
+            width: 45%;
+            border-style: solid;
+            border-width: thin;
+            border-color: #666666;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line1 .dr-marie {
+            width: 45%;
+            border-style: solid;
+            border-width: thin;
+            border-color: #666666;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line2 .norton {
+            width: 45%;
+            border-style: solid;
+            border-width: thin;
+            border-color: #666666;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line2 .cartoons {
+            width: 45%;
+            border-style: solid;
+            border-width: thin;
+            border-color: #666666;
+        }
+
+        .passedevents-boxes .passedevents-boxes-line2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .passedevents-boxes {
+            box-sizing: border-box;
+            margin: 30px 100px 0;
+        }
+
+        .read-more-bt {
+            width: 200px;
+            font-size: 17px;
+            padding: 20px 0px;
+            background-color: #81256c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            line-height: 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 60px auto 90px;
+        }
+
+        .read-more-bt:hover {
+            background-color: #000000;
+            transition: ease-in-out .3s;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .upcomingevents {
+                margin: 50px 20px 20px;
+            }
+
+            .upcoming {
+                display: flex;
+                flex-direction: column;
+                margin: 0 20px;
+            }
+
+            .upcomingevent1 {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            .upcoming-img {
+                height: 100%;
+            }
+
+            .upcoming-title-date {
+                padding-left: 5px;
+            }
+
+            .upcoming-title-date .upcoming-title {
+                font-size: 12px;
+                margin-bottom: 7px;
+            }
+
+            .upcoming-title-date .upcoming-date {
+                font-size: 11px;
+                padding: 1px 3px;
+            }
+
+            .upcomingevent2 {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .events-calendar {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .events-calendar .calendar-img {
+                display: none;
+            }
+
+            .events-calendar span {
+                padding: 5px;
+            }
+
+            .passedevents {
+                margin: 40px 20px 20px;
+            }
+
+            .passedevents-boxes .passed-event-title {
+                padding: 0px 5px;
+                font-size: 18px;
+            }
+
+            .passedevents-boxes img {
+                padding: 5px 5px 0;
+            }
+
+            .passedevents-boxes hr {
+                margin: 5px 5px;
+            }
+
+            .passedevents-boxes .passed-event-date {
+                font-size: 11px;
+                padding: 0 5px;
+                margin-bottom: 5px;
+            }
+
+            .passedevents-boxes p {
+                padding: 0 5px;
+                font-size: 12px;
+            }
+
+            .passedevents-boxes .find-out-more {
+                font-size: 12px;
+                padding: 0 5px;
+                margin: 5px 0;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line1 .chomsky {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line1 .dr-marie {
+                width: 100%;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line2 .norton {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line2 .cartoons {
+                width: 100%;
+            }
+
+            .passedevents-boxes .passedevents-boxes-line2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .passedevents-boxes {
+                box-sizing: border-box;
+                margin: 0 20px;
+            }
+        }
+    </style>
+    <!-- End Css -->
+
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li> <a href="index.html">Home</a> </li>
+                                        <li> <a href="about.html">About us</a> </li>
+                                        <li><a href="books.html">Our Books</a></li>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li class="mean-last"> <a href="#"><img src="images/search_icon.png"
+                                                    alt="#" /></a> </li>
+                                        <li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+    <!-- end header -->
+    <div class="about-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="abouttitle">
+                        <h2>Events</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="upcomingevents">
+        <h3>Upcoming Events</h3>
+    </div>
+
+    <div class="upcoming">
+
+        <div class="upcomingevent1">
+            <div class="upcoming-img">
+                <img src="new_images/lib1.png" alt="Memorial Library new branch">
+            </div>
+            <div class="upcoming-title-date">
+                <a href="grand_opening.html"><span class="upcoming-title">Memorial Library Is Proud To Announce The Grand Opening Of Its New Branch
+                    In Manchester</span></a>
+                <br>
+                <span class="upcoming-date">FEB 15</span>
+            </div>
+        </div>
+
+        <div class="upcomingevent2">
+            <div class="upcoming-img"><img src="new_images/book_cover.jpg"
+                    alt="Book cover of Arthur In The Celtic Languages"></div>
+            <div class="upcoming-title-date">
+                <span class="upcoming-title">Book Launch: Arthur In The Celtic Languages, By Ceridwen Lloyd-Morgan And
+                    Erich Poppe.</span>
+                <br>
+                <span class="upcoming-date">FEB 21</span>
+            </div>
+        </div>
+
+        <div class="events-calendar">
+            <div class="calendar-img">
+                <img src="new_images/calendar.png" alt="#">
+            </div>
+            <span class="view-calendar">VIEW FULL CALENDAR</span>
+        </div>
+    </div>
+
+    <div class="passedevents">
+        <h2>Passed Events</h2>
+    </div>
+
+    <div class="passedevents-boxes">
+        <div class="passedevents-boxes-line1">
+            <div class="chomsky">
+                <img src="new_images/chomsky.jpg" alt="Photo of Noam Chomsky">
+                <span class="passed-event-title">A Online Conversation With Noam Chomsky On Race & Humanity</span>
+                <hr>
+                <span class="passed-event-date">23 / 01 / 2021</span>
+                <p>Memorial Library Chief Librerian Pieterse in conversation with Noam Chomsky, linguist, philosopher
+                    and political commentator. Chomsky is emeritus professor of linguistics at MIT. He is still opening
+                    up new kinds of questions and topics for inquiry.</p>
+                <span class="find-out-more">Find Out More</span>
+            </div>
+
+            <div class="dr-marie">
+                <img src="new_images/dr_Marie.jpg" alt="Photo of Dr. Marie Cassidy">
+                <span class="passed-event-title">Dr. Marie Cassidy's Beyond The Tape, An Online Book Event</span>
+                <hr>
+                <span class="passed-event-date">16 / 01 / 2021</span>
+                <p>We were delighted to welcome former State Pathologist Dr. Marie Cassidy to an online book event in
+                    celebration of the release of her memoirs, Beyond The Tape: The Life And Many Deaths Of A State
+                    Pathologist.</p>
+                <span class="find-out-more">Find Out More</span>
+            </div>
+        </div>
+
+        <div class="passedevents-boxes-line2">
+            <div class="norton">
+                <img src="new_images/norton.jpg" alt="Photo of Graham Norton">
+                <span class="passed-event-title">Graham Norton’s Home Stretch, An Online Book Event</span>
+                <hr>
+                <span class="passed-event-date">07 / 01 / 2021</span>
+                <p>To celebrate the January release of his new novel Home Stretch, Memorial Library was delighted to
+                    welcome Graham Norton to our online book event. In Conversation with Rick O’shea, Norton discussed
+                    his new novel and his love of literature.</p>
+                <span class="find-out-more">Find Out More</span>
+            </div>
+
+            <div class="cartoons">
+                <img src="new_images/cartoon.jpg" alt="British political cartoon">
+                <span class="passed-event-title">Political Cartoons And Public Debates, An Online Discussion</span>
+                <hr>
+                <span class="passed-event-date">26 / 12 / 2020</span>
+                <p>For over two hundred years, whenever a debate has broken out in the UK, political cartoons have been
+                    there to take part in the argument. Memorial Library was delighted to welcome experts across
+                    different domains to discuss cartoons use in politics.</p>
+                <span class="find-out-more">Find Out More</span>
+            </div>
+        </div>
+    </div>
+    <button class="read-more-bt">Read More</button>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row pdn-top-30">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="Follow">
+                            <h3>Follow Us</h3>
+                        </div>
+                        <ul class="location_icon">
+                            <li> <a href="#"><img src="icon/facebook.png"></a></li>
+                            <li> <a href="#"><img src="icon/Twitter.png"></a></li>
+                            <li> <a href="#"><img src="icon/linkedin.png"></a></li>
+                            <li> <a href="#"><img src="icon/instagram.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                        <div class="Follow">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <input class="Newsletter" placeholder="Enter your email" type="Enter your email">
+                        <button class="Subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
